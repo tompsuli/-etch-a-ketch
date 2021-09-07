@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Glory:wght@300&display=swap');
+
+body {
+    background-image: linear-gradient(120deg, #d0f6fb, #e8a6f4);
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    font-size: 55px;
+    color: #473c3c;
+    font-family:"Pacifico", cursive;
+    text-shadow: 3px 3px 2px #d8bfd8;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    font-family: "Glory", sans-serif;
+    color: #473c3c;
+    font-size: 35px;
+}
+
+#main-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 125px 125px 125px 125px;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "selectors selectors selectors selectors" 
+    "sizecontrol sizecontrol colorcontrol colorcontrol"
+    "gamegrid gamegrid gamegrid gamegrid";
+}
+
+h3 {
+    font-family: "Glory", sans-serif;
+    font-size: 29px;
+    color: #473c3c;
+    font-weight: bold;
+}
+
+button {
+    font-family: "Glory", sans-serif;
+    color:#473c3c;
+    font-size: 15px;
+    font-weight:bold;
+    background-color: #e9b7bf;
+    border:#fec285 1px solid;
+    border-radius: 30px;
+    height: 60px;
+    width: 60px;
+}
+
+#color-picker {
+    visibility: hidden;
+}
+
+#color-picker-wrapper {
+    background-color: #000000;
+    display: inline-block;
+    width: 58px;
+    height: 58px;
+    border: #fec285 1px solid;
+    border-radius: 30px;
+}
+
+#grid-size {
+    font-family: "Glory", sans-serif;
+    color: #473c3c;
+    font-weight: bold;
+    font-size: 15px;
+    position: absolute;
+    padding-right: 90px;
+}
+
+#selectors {
+    grid-area: selectors;
+    display: inline-flex;
+    justify-content: space-around;
+
+}
+
+#color-text {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#controls {
+    grid-area: sizecontrol;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 130px;
+    height: 24px;
+    margin-top: 20px;
+    border: #fec285 1px solid;
+    border-radius: 15px;
+    background: #e9b7bf;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    border: #fec285 1px solid;
+    border-radius: 50%;
+    background: #473c3c;
+}
+
+#color-controls {
+    grid-area: colorcontrol;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#grid-container {
+    display: grid;
+    height: 500px;
+    width: 500px;
+    border: 3px solid #fec285;
+    background-color: #ffffff;
+    grid-area: gamegrid;
+}
+
+.cell {
+    border: 1px solid #fec285;
+    box-sizing: border-box;
+}

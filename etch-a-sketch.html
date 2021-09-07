@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Etch-a-Ketch</title>
+  <meta charset="UTF-8"/>
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1 id="header">Etch-a-Sketch</h1>
+  <h2 id="info">Draw with your cursor</h2>
+  <div id="main-container">
+    <div id="selectors">
+      <h3 id="size-text">Select Size</h3>
+      <h3 id="color-text">Select Color</h3>
+    </div>
+    <div id="controls">
+      <div id="grid-size">16 x 16</div>
+      <input type="range" min="2" max="64" value="16" step="1" id="size-slider">
+      <button id="reset">New</button>
+    </div>
+    <div id="color-controls">
+      <label id="color-picker-wrapper">
+        <input type="color" value="#000000" id="color-picker">
+      </label>
+      <button id="random">Random Colors</button>
+      <button id="eraser">Eraser</button>
+    </div>
+    <div id="grid-container"></div>
+  </div>
+</body>
+</html>
